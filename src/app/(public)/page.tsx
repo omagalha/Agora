@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 const LogoMark = () => (
-  <svg className="logo-mark" viewBox="0 0 100 100">
-    <polygon points="50,8 76,23 76,53 50,68 24,53 24,23" fill="#33445E" />
-    <polygon points="80,28 100,40 100,62 80,74 80,52" fill="#33445E" opacity="0.5" />
-    <polygon points="20,28 0,40 0,62 20,74 20,52" fill="#33445E" opacity="0.5" />
-    <polygon points="50,52 76,67 76,82 50,97 24,82 24,67" fill="#33445E" opacity="0.7" />
-    <polygon points="50,30 64,38 64,55 50,63 36,55 36,38" fill="#B58A2C" />
+  <svg className="logo-mark" viewBox="-45 -43 90 86" fill="none">
+    <polygon points="-14,-40 -2,-33 -2,-19 -14,-12 -26,-19 -26,-33" fill="#33445E" />
+    <polygon points="14,-40 26,-33 26,-19 14,-12 2,-19 2,-33"   fill="#7D8CA1" />
+    <polygon points="-30,-14 -18,-7 -18,7 -30,14 -42,7 -42,-7" fill="#B8C2CC" />
+    <polygon points="0,-14 12,-7 12,7 0,14 -12,7 -12,-7"        fill="#B58A2C" />
+    <polygon points="30,-14 42,-7 42,7 30,14 18,7 18,-7"        fill="#0B1F3A" />
+    <polygon points="-14,12 -2,19 -2,33 -14,40 -26,33 -26,19"  fill="#B8C2CC" />
+    <polygon points="14,12 26,19 26,33 14,40 2,33 2,19"         fill="#33445E" />
   </svg>
 );
 
@@ -88,7 +90,10 @@ export default function LandingPage() {
         <div className="nav-inner">
           <Link href="/" className="logo">
             <LogoMark />
-            <span className="logo-text">Ágora</span>
+            <div className="logo-label">
+              <span className="logo-text">Ágora</span>
+              <span className="logo-sub">CRM POLÍTICO</span>
+            </div>
           </Link>
           <div className="nav-links">
             <a href="#produto" onClick={e => { e.preventDefault(); scrollTo("produto"); }}>Produto</a>
